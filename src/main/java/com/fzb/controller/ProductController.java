@@ -30,7 +30,7 @@ public class ProductController {
         System.out.println(YunCommonUtils.request.getVersion());
         YunCommonUtils.setInformation("1.1.0");
         System.out.println(YunCommonUtils.request.getVersion());
-//        YunCommonUtils.request.setCloudToken(cloudToken);
+        YunCommonUtils.request.setCloudToken(cloudToken);
         YunCommonUtils.request.putParam("productKey", productKey);
         return YunCommonUtils.outJson("/cloud/thing/product/get");
     }
