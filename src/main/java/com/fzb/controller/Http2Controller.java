@@ -26,7 +26,7 @@ public class Http2Controller {
         };
         messageClient.setMessageListener(messageCallback);
         messageClient.connect(messageCallback);
-        return "successe";
+        return "success";
     }
 
 }
