@@ -1,31 +1,15 @@
-# 项目启动
+在压缩包中有feiyan_demo.sql的文件，执行导入到本地数据库中。
 
-启动项目，访问http://localhost:8081/swagger-ui.html进入swagger页面
+启动项目，访问http://localhost:8088/进入登录页面
 
-![image-20200225175450254](C:\Users\35792\AppData\Roaming\Typora\typora-user-images\image-20200225175450254.png)
+输入用户名：超级管理员；密码：123456，即可登录
 
-# 设备数据同步
+不同角色的用户对用户管理界面，角色管理界面的操作权限都有区别。
 
-![image-20200225180357374](C:\Users\35792\AppData\Roaming\Typora\typora-user-images\image-20200225180357374.png)
+用户的云端身份和云端密码对应下图：
 
-![image-20200225180505024](C:\Users\35792\AppData\Roaming\Typora\typora-user-images\image-20200225180505024.png)
+![image-20200301155513325](C:\Users\35792\AppData\Roaming\Typora\typora-user-images\image-20200301155513325.png)
 
-![image-20200225180556173](C:\Users\35792\AppData\Roaming\Typora\typora-user-images\image-20200225180556173.png)
+用户的同步身份和同步密码对应下图：
 
-![image-20200225180703166](C:\Users\35792\AppData\Roaming\Typora\typora-user-images\image-20200225180703166.png)
-
-![image-20200225180814109](C:\Users\35792\AppData\Roaming\Typora\typora-user-images\image-20200225180814109.png)
-
-此时项目的控制台会出现同步数据
-
-# 云端调用API
-
-![image-20200225180857541](C:\Users\35792\AppData\Roaming\Typora\typora-user-images\image-20200225180857541.png)
-
-![image-20200225181102732](C:\Users\35792\AppData\Roaming\Typora\typora-user-images\image-20200225181102732.png)
-
-![image-20200225181126727](C:\Users\35792\AppData\Roaming\Typora\typora-user-images\image-20200225181126727.png)
-
-输出成功。
-
-其余方法操作类似，输入的请求参数参照API文档。
+![image-20200301155527728](C:\Users\35792\AppData\Roaming\Typora\typora-user-images\image-20200301155527728.png)
