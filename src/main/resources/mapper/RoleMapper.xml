@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fzb.mapper.RoleMapper">
+    
+    <select id="findAllRole" resultType="Role">
+        select * from role order by rid;
+    </select>
+
+    <select id="findUserRolesById" parameterType="Integer" resultType="Role">
+        select rid,rname from role natural join user_role
+         where uid=#{uid};
+    </select>
+
+    <delete id="deleteUserRoles" parameterType="Integer">
+        delete from user_role where uid=#{uid};
+    </delete>
+
+    <insert id="giveUserRole">
+        insert into user_role(uid,rid) value(#{uid},#{rid});
+    </insert>
+
+    <insert id="addRole" parameterType="Role">
+        insert into role(rname) values(#{rname});
+    </insert>
+
+    <select id="findRoleById" parameterType="Integer" resultType="Role">
+        select * from role where rid=#{rid};
+    </select>
+
+    <update id="updateRole" parameterType="Role">
+        update role set rname=#{rname} where rid=#{rid};
+    </update>
+
+    <delete id="deleteRole" parameterType="Integer">
+        delete from role where rid=#{rid};
+    </delete>
+
+</mapper>

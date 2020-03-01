@@ -1,2 +1,13 @@
 server:
-  port: 8081
+  port: 8088
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/feiyan_demo?serverTimezone=UTC&useUnicode=true&characterEncodingutf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.fzb.entity

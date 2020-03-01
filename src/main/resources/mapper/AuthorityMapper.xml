@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fzb.mapper.AuthorityMapper">
+
+    <select id="findUserAuthorities" parameterType="Integer" resultType="Authority">
+        select distinct aid,aname from authority natural join role_authority natural join user_role
+         where uid = #{uid}
+    </select>
+
+    <select id="findAllAuthority" resultType="Authority">
+        select * from authority;
+    </select>
+
+    <select id="findRoleAuthorities" parameterType="Integer" resultType="Authority">
+        select aid,aname from authority natural join role_authority where rid=#{rid} order by rid;
+    </select>
+
+    <delete id="deleteRoleAuthorities" parameterType="Integer">
+        delete from role_authority where rid=#{rid};
+    </delete>
+
+    <insert id="giveRoleAuthorities">
+        insert into role_authority(rid,aid) values(#{rid},#{aid});
+    </insert>
+
+</mapper>

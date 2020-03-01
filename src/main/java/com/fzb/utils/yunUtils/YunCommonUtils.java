@@ -14,9 +14,9 @@ public class YunCommonUtils {
 
     public static IoTApiRequest request = new IoTApiRequest();
 
-    public static void setInformation(String apiVer){
-        ioTApiClientBuilderParams.setAppKey("28397888");
-        ioTApiClientBuilderParams.setAppSecret("18ae71dd1fa152daba599d4e3e7dfd59");
+    public static void setInformation(String appKey,String appSecret,String apiVer){
+        ioTApiClientBuilderParams.setAppKey(appKey);
+        ioTApiClientBuilderParams.setAppSecret(appSecret);
         syncApiClient.init(ioTApiClientBuilderParams);
         request.setApiVer(apiVer);
     }
